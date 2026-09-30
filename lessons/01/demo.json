@@ -1,0 +1,416 @@
+{
+  "label": "Character-count bigram baseline; not a transformer or trained neural network",
+  "corpus": [
+    "the cat sat.",
+    "the dog sat.",
+    "the cat ran."
+  ],
+  "vocabulary": [
+    " ",
+    ".",
+    "a",
+    "c",
+    "d",
+    "e",
+    "g",
+    "h",
+    "n",
+    "o",
+    "r",
+    "s",
+    "t"
+  ],
+  "document_boundaries": "No pairs cross documents; no BOS/EOS tokens added",
+  "shifted_examples": [
+    {
+      "inputs": [
+        "t",
+        "h",
+        "e",
+        " ",
+        "c",
+        "a",
+        "t",
+        " ",
+        "s",
+        "a",
+        "t"
+      ],
+      "targets": [
+        "h",
+        "e",
+        " ",
+        "c",
+        "a",
+        "t",
+        " ",
+        "s",
+        "a",
+        "t",
+        "."
+      ]
+    },
+    {
+      "inputs": [
+        "t",
+        "h",
+        "e",
+        " ",
+        "d",
+        "o",
+        "g",
+        " ",
+        "s",
+        "a",
+        "t"
+      ],
+      "targets": [
+        "h",
+        "e",
+        " ",
+        "d",
+        "o",
+        "g",
+        " ",
+        "s",
+        "a",
+        "t",
+        "."
+      ]
+    },
+    {
+      "inputs": [
+        "t",
+        "h",
+        "e",
+        " ",
+        "c",
+        "a",
+        "t",
+        " ",
+        "r",
+        "a",
+        "n"
+      ],
+      "targets": [
+        "h",
+        "e",
+        " ",
+        "c",
+        "a",
+        "t",
+        " ",
+        "r",
+        "a",
+        "n",
+        "."
+      ]
+    }
+  ],
+  "counted_pairs": 33,
+  "counts": {
+    " ": {
+      "c": 2,
+      "d": 1,
+      "r": 1,
+      "s": 2
+    },
+    "a": {
+      "n": 1,
+      "t": 4
+    },
+    "c": {
+      "a": 2
+    },
+    "d": {
+      "o": 1
+    },
+    "e": {
+      " ": 3
+    },
+    "g": {
+      " ": 1
+    },
+    "h": {
+      "e": 3
+    },
+    "n": {
+      ".": 1
+    },
+    "o": {
+      "g": 1
+    },
+    "r": {
+      "a": 1
+    },
+    "s": {
+      "a": 2
+    },
+    "t": {
+      " ": 2,
+      ".": 2,
+      "h": 3
+    }
+  },
+  "probabilities": {
+    " ": {
+      "c": 0.3333333333333333,
+      "d": 0.16666666666666666,
+      "r": 0.16666666666666666,
+      "s": 0.3333333333333333
+    },
+    "a": {
+      "n": 0.2,
+      "t": 0.8
+    },
+    "c": {
+      "a": 1.0
+    },
+    "d": {
+      "o": 1.0
+    },
+    "e": {
+      " ": 1.0
+    },
+    "g": {
+      " ": 1.0
+    },
+    "h": {
+      "e": 1.0
+    },
+    "n": {
+      ".": 1.0
+    },
+    "o": {
+      "g": 1.0
+    },
+    "r": {
+      "a": 1.0
+    },
+    "s": {
+      "a": 1.0
+    },
+    "t": {
+      " ": 0.2857142857142857,
+      ".": 0.2857142857142857,
+      "h": 0.42857142857142855
+    }
+  },
+  "inspected_context": {
+    "character": "t",
+    "counts": {
+      " ": 2,
+      ".": 2,
+      "h": 3
+    },
+    "probabilities": {
+      " ": 0.2857142857142857,
+      ".": 0.2857142857142857,
+      "h": 0.42857142857142855
+    }
+  },
+  "row_a": {
+    "character": "a",
+    "counts": {
+      "n": 1,
+      "t": 4
+    },
+    "probabilities": {
+      "n": 0.2,
+      "t": 0.8
+    }
+  },
+  "row_a_generation": {
+    "prompt": "ca",
+    "seed": 0,
+    "max_new_characters": 6,
+    "text": "cathe do",
+    "generated_characters": 6,
+    "stop_reason": "length_limit",
+    "steps": [
+      {
+        "step": 1,
+        "prefix_before": "ca",
+        "context": "a",
+        "ticket": 3,
+        "total_count": 5,
+        "probabilities": {
+          "n": 0.2,
+          "t": 0.8
+        },
+        "next_character": "t",
+        "prefix_after": "cat"
+      },
+      {
+        "step": 2,
+        "prefix_before": "cat",
+        "context": "t",
+        "ticket": 6,
+        "total_count": 7,
+        "probabilities": {
+          " ": 0.2857142857142857,
+          ".": 0.2857142857142857,
+          "h": 0.42857142857142855
+        },
+        "next_character": "h",
+        "prefix_after": "cath"
+      },
+      {
+        "step": 3,
+        "prefix_before": "cath",
+        "context": "h",
+        "ticket": 1,
+        "total_count": 3,
+        "probabilities": {
+          "e": 1.0
+        },
+        "next_character": "e",
+        "prefix_after": "cathe"
+      },
+      {
+        "step": 4,
+        "prefix_before": "cathe",
+        "context": "e",
+        "ticket": 0,
+        "total_count": 3,
+        "probabilities": {
+          " ": 1.0
+        },
+        "next_character": " ",
+        "prefix_after": "cathe "
+      },
+      {
+        "step": 5,
+        "prefix_before": "cathe ",
+        "context": " ",
+        "ticket": 2,
+        "total_count": 6,
+        "probabilities": {
+          "c": 0.3333333333333333,
+          "d": 0.16666666666666666,
+          "r": 0.16666666666666666,
+          "s": 0.3333333333333333
+        },
+        "next_character": "d",
+        "prefix_after": "cathe d"
+      },
+      {
+        "step": 6,
+        "prefix_before": "cathe d",
+        "context": "d",
+        "ticket": 0,
+        "total_count": 1,
+        "probabilities": {
+          "o": 1.0
+        },
+        "next_character": "o",
+        "prefix_after": "cathe do"
+      }
+    ]
+  },
+  "encoding_example": {
+    "vocabulary": [
+      " ",
+      ".",
+      "a",
+      "c",
+      "d",
+      "e",
+      "g",
+      "h",
+      "n",
+      "o",
+      "r",
+      "s",
+      "t"
+    ],
+    "text": "cat",
+    "ids": [
+      3,
+      2,
+      12
+    ],
+    "decoded": "cat"
+  },
+  "generation": {
+    "prompt": "t",
+    "seed": 7,
+    "max_new_characters": 40,
+    "text": "t.",
+    "generated_characters": 1,
+    "stop_reason": "period",
+    "steps": [
+      {
+        "step": 1,
+        "prefix_before": "t",
+        "context": "t",
+        "ticket": 2,
+        "total_count": 7,
+        "probabilities": {
+          " ": 0.2857142857142857,
+          ".": 0.2857142857142857,
+          "h": 0.42857142857142855
+        },
+        "next_character": ".",
+        "prefix_after": "t."
+      }
+    ]
+  },
+  "unseen_context_demo": {
+    "prompt": "?",
+    "seed": 7,
+    "max_new_characters": 40,
+    "text": "?",
+    "generated_characters": 0,
+    "stop_reason": "unseen_context",
+    "steps": []
+  },
+  "heldout_example": {
+    "training_documents": [
+      "the cat sat.",
+      "the dog sat."
+    ],
+    "heldout_documents": [
+      "the cat ran."
+    ],
+    "result": {
+      "pair_count": 11,
+      "zero_probability_pairs": [
+        {
+          "document_index": 0,
+          "position": 7,
+          "context": " ",
+          "target": "r"
+        },
+        {
+          "document_index": 0,
+          "position": 8,
+          "context": "r",
+          "target": "a"
+        },
+        {
+          "document_index": 0,
+          "position": 9,
+          "context": "a",
+          "target": "n"
+        },
+        {
+          "document_index": 0,
+          "position": 10,
+          "context": "n",
+          "target": "."
+        }
+      ],
+      "mean_nll_nats": null,
+      "status": "infinite_unsmoothed_loss"
+    }
+  },
+  "limitations": [
+    "Only the previous character is used; longer prompts do not add context.",
+    "No smoothing: missing transitions have probability zero.",
+    "Generation stops explicitly at a period, at the length cap, or at a context without outgoing counts; period stop is a teaching rule, not a learned EOS token.",
+    "Generation model uses all three documents; heldout scoring separately fits only the first two.",
+    "Tiny authored corpus and one heldout document are educational, not a generalization benchmark.",
+    "Seeded sampling is repeatable within the tested Python implementation; trace includes exact random tickets."
+  ]
+}
