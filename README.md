@@ -5,7 +5,7 @@ Start with a transparent character-count baseline, then build the components of 
 
 ## Available now
 
-- **1A: What are we actually teaching a language model?** The next-token task, character tokens, shifted targets, counts, probabilities and the limits of one-character context.
+- **[Watch 1A: What are we actually teaching a language model?](https://youtu.be/hSht0qBgSaE)** The next-token task, character tokens, shifted targets, counts, probabilities and the limits of one-character context.
 - [Lesson 1 code and exercises](lessons/01/README.md): a runnable standard-library baseline. The companion 1B video is in preparation.
 
 This first model is **not a transformer or neural network**. Its probabilities come from adjacent-character counts in three original sentences. The corpus is small enough to inspect completely, not a benchmark for language ability.
