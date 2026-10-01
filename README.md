@@ -7,6 +7,13 @@ Start with a transparent character-count baseline, then build the components of 
 
 - **[Watch 1A: What are we actually teaching a language model?](https://youtu.be/hSht0qBgSaE)** The next-token task, character tokens, shifted targets, counts, probabilities and the limits of one-character context.
 - [Lesson 1 code and exercises](lessons/01/README.md): a runnable standard-library baseline. The companion 1B video is in preparation.
+- [Lesson 2 calculations and tests](lessons/02/README.md): vectors, dot products, bias, matrix outputs and independent batch rows.
+
+The learning Shorts use the same examples, one narrow topic at a time:
+next-token prediction; token IDs; shifted targets; pair counts; row
+probabilities; sampling; context limits; vectors; dot products; bias;
+matrix outputs; and batch shapes. Videos are available only when linked;
+this list is the sequence, not a claim that every Short has been released.
 
 This first model is **not a transformer or neural network**. Its probabilities come from adjacent-character counts in three original sentences. The corpus is small enough to inspect completely, not a benchmark for language ability.
 
